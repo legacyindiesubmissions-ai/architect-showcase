@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zackery Michael Sayers - Architect Showcase</title>
+    <style>
+        :root {
+            --bg: #0a192f;
+            --text: #ccd6f6;
+            --accent: #64ffda;
+            --secondary: #8892b0;
+            --card-bg: #112240;
+            --nav-bg: rgba(10, 25, 47, 0.85);
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        header {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin: 0;
+            color: var(--text);
+            font-weight: 800;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
+        h3 {
+            color: var(--text);
+            font-size: 1.8rem;
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        h3::after {
+            content: "";
+            display: block;
+            position: relative;
+            width: 300px;
+            height: 1px;
+            margin-left: 20px;
+            background-color: var(--secondary);
+        }
+        .summary {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
+        .scale-badge {
+            display: inline-block;
+            background: rgba(100, 255, 218, 0.1);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            border: 1px solid var(--accent);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+        }
+        .project-card h4 {
+            margin: 0 0 1rem 0;
+            font-size: 1.4rem;
+            color: var(--text);
+        }
+        .project-card h4 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .project-card h4 a:hover {
+            color: var(--accent);
+        }
+        .project-card p {
+            font-size: 0.95rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.8rem;
+            color: var(--secondary);
+        }
+        .tech-list li {
+            margin-right: 15px;
+        }
+        .section-label {
+            color: var(--accent);
+            font-family: 'SF Mono', monospace;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        footer {
+            margin-top: 8rem;
+            padding-bottom: 4rem;
+            text-align: center;
+            color: var(--secondary);
+            font-family: 'SF Mono', monospace;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Zackery Michael Sayers</h1>
+            <h2>Systems Architect | AI Infrastructure Engineer | Neural Researcher</h2>
+        </header>
+
+        <div class="summary">
+            I deconstruct and rebuild complex cognitive environments from the "bare metal" up. With over 15 years of first-principles engineering experience, I operate a private internal lab (<strong>TaterLabs</strong>) where I manage high-intensity builds spanning from custom 64-bit kernels to 83M synapse brain simulations.
+        </div>
+
+        <div class="scale-badge">Currently managing a workspace of nearly 600,000 files</div>
+
+        <h3>Foundational Research</h3>
+        <div class="grid">
+            <div class="project-card">
+                <span class="section-label">Agentic Infrastructure</span>
+                <h4><a href="https://github.com/legacyindiesubmissions-ai/Mnemosyne">Mnemosyne</a></h4>
+                <p>An MCP-native memory layer for agents implementing Hebbian dynamics (LTP/LTD). Features associative retrieval graphs and session-start briefing hooks to eliminate contextual drift.</p>
+                <ul class="tech-list">
+                    <li>Python</li>
+                    <li>SQLite (FTS5)</li>
+                    <li>MCP</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <span class="section-label">Neural Simulation</span>
+                <h4><a href="https://github.com/legacyindiesubmissions-ai/nexus">Nexus</a></h4>
+                <p>Biologically-inspired whole-brain simulation with 45,000 neurons and 83M synapses. Features functional analogs for the Thalamus, Amygdala, and a GPU-accelerated plasticity engine.</p>
+                <ul class="tech-list">
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>GPU-Accelerated</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <span class="section-label">OS Kernel</span>
+                <h4><a href="https://github.com/legacyindiesubmissions-ai/TaterTOS64">TaterTOS64v3</a></h4>
+                <p>Proprietary 64-bit kernel built from a blank state. Features 4-level paging, COW memory management, custom VFS, and drivers for NVMe/PCI. Currently porting Chromium/Ladybird.</p>
+                <ul class="tech-list">
+                    <li>C</li>
+                    <li>x86_64 ASM</li>
+                    <li>UEFI</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Specialized Products & AI Solutions</h3>
+        <div class="grid">
+            <div class="project-card">
+                <span class="section-label">Audio Intelligence</span>
+                <h4>AudioLens</h4>
+                <p>Structured perceptual translation for LLMs. Converts raw audio signals into high-fidelity "listening reports" covering BPM, key, and spectral density.</p>
+                <ul class="tech-list">
+                    <li>Python</li>
+                    <li>NumPy</li>
+                    <li>Librosa</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <span class="section-label">SaaS & Media</span>
+                <h4>RadioStudioCS / TaterWave</h4>
+                <p>AI-powered radio station suite featuring AI DJs, voice cloning, and autonomous multi-agent orchestration. Managed via a high-performance C#/.NET 8 backend.</p>
+                <ul class="tech-list">
+                    <li>C#</li>
+                    <li>.NET 8</li>
+                    <li>Avalonia</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <span class="section-label">Digital Audio Workstation</span>
+                <h4>TaterDAW / FLgpt</h4>
+                <p>Modern DAW specialized for AI-assisted music production. Features natural language control workflows and high-performance audio I/O via NAudio.</p>
+                <ul class="tech-list">
+                    <li>C#</li>
+                    <li>NAudio</li>
+                    <li>NLP Integration</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <span class="section-label">Web Engine</span>
+                <h4>TaterSurf</h4>
+                <p>Native web browser for TaterTOS. Features a custom HTML5 tokenizer, CSS3 selector engine, and a DOM/WebAPI bridge via QuickJS.</p>
+                <ul class="tech-list">
+                    <li>C</li>
+                    <li>QuickJS</li>
+                    <li>DOM Implementation</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <span class="section-label">Embodied AI</span>
+                <h4>EmbodiedLLM</h4>
+                <p>Research into grounding large language models within simulated and physical environments, focusing on sensory-to-action pipelines.</p>
+                <ul class="tech-list">
+                    <li>AI Research</li>
+                    <li>Action Pipelines</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <span class="section-label">Mobile Systems</span>
+                <h4>TaterLabel / RadioPlayer</h4>
+                <p>Cross-platform mobile applications for the TaterLabs ecosystem, built with Flutter and Capacitor for seamless listener engagement.</p>
+                <ul class="tech-list">
+                    <li>Flutter</li>
+                    <li>Capacitor</li>
+                    <li>Cross-Platform</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <span class="section-label">Hardware & Firmware</span>
+                <h4>p33-firmware / LegacyMaster</h4>
+                <p>Low-level firmware and system management tools for specialized hardware builds and kernel optimization.</p>
+                <ul class="tech-list">
+                    <li>C</li>
+                    <li>Low-Level I/O</li>
+                    <li>Firmware</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            Built in the Lab. | sayerszack11@gmail.com | Forest City, IA | 2026
+        </footer>
+    </div>
+</body>
+</html>
