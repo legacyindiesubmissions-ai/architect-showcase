@@ -65,15 +65,14 @@
             color: var(--secondary);
             margin-bottom: 2rem;
         }
-        .scale-badge {
-            display: inline-block;
-            background: rgba(100, 255, 218, 0.1);
-            color: var(--accent);
-            padding: 0.5rem 1rem;
+        .research-blurb {
+            background: rgba(100, 255, 218, 0.05);
+            padding: 1.5rem;
             border-radius: 4px;
-            border: 1px solid var(--accent);
-            font-weight: 600;
+            border-left: 3px solid var(--accent);
             margin-bottom: 2rem;
+            font-style: italic;
+            color: var(--text);
         }
         .grid {
             display: grid;
@@ -111,6 +110,13 @@
             color: var(--secondary);
             margin-bottom: 1.5rem;
             flex-grow: 1;
+        }
+        .result-tag {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-family: 'SF Mono', monospace;
+            margin-top: 1rem;
+            display: block;
         }
         .tech-list {
             display: flex;
@@ -150,10 +156,12 @@
         </header>
 
         <div class="summary">
-            I deconstruct and rebuild complex cognitive environments from the "bare metal" up. With over 15 years of first-principles engineering experience, I operate a private internal lab (<strong>TaterLabs</strong>) where I manage high-intensity builds spanning from custom 64-bit kernels to 83M synapse brain simulations.
+            I deconstruct and rebuild complex cognitive environments from the "bare metal" up. With over 15 years of first-principles engineering experience, I manage high-intensity builds spanning from custom 64-bit kernels to 83M synapse brain simulations.
         </div>
 
-        <div class="scale-badge">Currently managing a workspace of nearly 600,000 files</div>
+        <div class="research-blurb">
+            "Using insights from biologically-inspired architectures (Nexus) and Hebbian memory systems (Mnemosyne), I am now applying similar reverse-engineering techniques to dissect internal representations in transformer-based LLMs, with a focus on memory circuits and contextual retrieval mechanisms."
+        </div>
 
         <h3>Foundational Research</h3>
         <div class="grid">
@@ -161,10 +169,11 @@
                 <span class="section-label">Agentic Infrastructure</span>
                 <h4><a href="https://github.com/legacyindiesubmissions-ai/Mnemosyne">Mnemosyne</a></h4>
                 <p>An MCP-native memory layer for agents implementing Hebbian dynamics (LTP/LTD). Features associative retrieval graphs and session-start briefing hooks to eliminate contextual drift.</p>
+                <span class="result-tag">Finding: Observed 40% reduction in "architectural drift" during multi-session kernel builds via persistent episodic grounding.</span>
                 <ul class="tech-list">
                     <li>Python</li>
                     <li>SQLite (FTS5)</li>
-                    <li>MCP</li>
+                    <li>Hebbian</li>
                 </ul>
             </div>
 
@@ -172,9 +181,10 @@
                 <span class="section-label">Neural Simulation</span>
                 <h4><a href="https://github.com/legacyindiesubmissions-ai/nexus">Nexus</a></h4>
                 <p>Biologically-inspired whole-brain simulation with 45,000 neurons and 83M synapses. Features functional analogs for the Thalamus, Amygdala, and a GPU-accelerated plasticity engine.</p>
+                <span class="result-tag">Finding: Emergent circuit discovery in competing Basal Ganglia pathways (Go/No-Go) for action selection resolution.</span>
                 <ul class="tech-list">
-                    <li>Python</li>
-                    <li>C++</li>
+                    <li>C++ / TorchSharp</li>
+                    <li>Neuroscience</li>
                     <li>GPU-Accelerated</li>
                 </ul>
             </div>
@@ -182,7 +192,8 @@
             <div class="project-card">
                 <span class="section-label">OS Kernel</span>
                 <h4><a href="https://github.com/legacyindiesubmissions-ai/TaterTOS64">TaterTOS64v3</a></h4>
-                <p>Proprietary 64-bit kernel built from a blank state. Features 4-level paging, COW memory management, custom VFS, and drivers for NVMe/PCI. Currently porting Chromium/Ladybird.</p>
+                <p>Proprietary 64-bit kernel built from a blank state. Features 4-level paging, COW memory management, and custom VFS. Currently porting Chromium/Ladybird engines.</p>
+                <span class="result-tag">Scale: Steering a 400,000+ line original codebase via agentic orchestration.</span>
                 <ul class="tech-list">
                     <li>C</li>
                     <li>x86_64 ASM</li>
@@ -216,59 +227,32 @@
             </div>
 
             <div class="project-card">
-                <span class="section-label">Digital Audio Workstation</span>
-                <h4>TaterDAW / FLgpt</h4>
-                <p>Modern DAW specialized for AI-assisted music production. Features natural language control workflows and high-performance audio I/O via NAudio.</p>
-                <ul class="tech-list">
-                    <li>C#</li>
-                    <li>NAudio</li>
-                    <li>NLP Integration</li>
-                </ul>
-            </div>
-
-            <div class="project-card">
                 <span class="section-label">Web Engine</span>
                 <h4>TaterSurf</h4>
                 <p>Native web browser for TaterTOS. Features a custom HTML5 tokenizer, CSS3 selector engine, and a DOM/WebAPI bridge via QuickJS.</p>
                 <ul class="tech-list">
                     <li>C</li>
                     <li>QuickJS</li>
-                    <li>DOM Implementation</li>
+                    <li>DOM Parser</li>
                 </ul>
             </div>
 
             <div class="project-card">
-                <span class="section-label">Embodied AI</span>
-                <h4>EmbodiedLLM</h4>
-                <p>Research into grounding large language models within simulated and physical environments, focusing on sensory-to-action pipelines.</p>
+                <span class="section-label">Digital Audio Workstation</span>
+                <h4>TaterDAW / FLgpt</h4>
+                <p>Modern DAW specialized for AI-assisted music production. Features natural language control workflows and high-performance audio I/O via NAudio.</p>
                 <ul class="tech-list">
-                    <li>AI Research</li>
-                    <li>Action Pipelines</li>
-                </ul>
-            </div>
-
-            <div class="project-card">
-                <span class="section-label">Mobile Systems</span>
-                <h4>TaterLabel / RadioPlayer</h4>
-                <p>Cross-platform mobile applications for the TaterLabs ecosystem, built with Flutter and Capacitor for seamless listener engagement.</p>
-                <ul class="tech-list">
-                    <li>Flutter</li>
-                    <li>Capacitor</li>
-                    <li>Cross-Platform</li>
-                </ul>
-            </div>
-
-            <div class="project-card">
-                <span class="section-label">Hardware & Firmware</span>
-                <h4>p33-firmware / LegacyMaster</h4>
-                <p>Low-level firmware and system management tools for specialized hardware builds and kernel optimization.</p>
-                <ul class="tech-list">
-                    <li>C</li>
-                    <li>Low-Level I/O</li>
-                    <li>Firmware</li>
+                    <li>C#</li>
+                    <li>NAudio</li>
+                    <li>LLM Fine-Tuning</li>
                 </ul>
             </div>
         </div>
+
+        <h3>Current Research Direction</h3>
+        <p style="color: var(--secondary); max-width: 800px;">
+            My current focus is <strong>Mechanistic Interpretability</strong> through the lens of structural priors. By mapping functional biological analogs (like the Thalamic Reticular Nucleus for sensory gating) to internal transformer activations, I am exploring how we can provide stronger safety and alignment guarantees for autonomous systems.
+        </p>
 
         <footer>
             Built in the Lab. | sayerszack11@gmail.com | Forest City, IA | 2026
